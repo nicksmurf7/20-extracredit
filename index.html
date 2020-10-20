@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title> Amicable Numbers </title>
+  <style>
+  article > section {
+    font-size: 16px;
+    display: inline-block;
+    width: 250px;
+    border: 1px outset black;
+    padding: 30px;
+    box-sizing: border-box;
+}
+  </style>
+  </head>
+  <body>
+    <center>
+    <h1> Welcome to Extra Credit by Nick Murphy</h1>
+    <br>
+    <article>
+      <section>
+        <input type= "text" name = "x" id = "x"> <br>
+       </section>
+      <button id = "z" type = "button" value = "r" class = "z" onclick = "switcher(); swaparrow();">
+        &rarr;
+      </button>
+      <section>
+        <input type= "text" name = "y" id = "y"> <br>
+     </section>
+    </article>
+    <script language = "Javascript">
+      function switcher()
+      {
+        var h = document.getElementById("x").value;
+        var w = document.getElementById("y").value;
+        //document.write("TEXT: " + h + " " + w + "</br>");
+        var r = h;
+        h = w;
+        w = r;
+        document.getElementById("x").value = h;
+        document.getElementById("y").value = w;
+        //document.write("TEXT: " + r + " " + s);
+      }
+      function swaparrow()
+      {
+        var e =document.getElementById("z") ;
+        if(document.getElementById("z").value == "r"){
+          e.value = "l";
+          e.innerHTML = "&larr;";
+         }
+        else if(document.getElementById("z").value == "l"){
+          e.value = "r";
+          e.innerHTML = "&rarr;";
+        }
+      }
+    </script>
+  </center> 
+  </body>
+</html>
